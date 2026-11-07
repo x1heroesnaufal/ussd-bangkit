@@ -1,0 +1,6 @@
+{
+  "name": "Test mesin sesi saat disimpan",
+  "description": "Setiap app/ussd/engine.py disimpan, jalankan pytest tests/test_engine.py tests/test_properties.py agar sifat navigasi USSD selalu terbukti aman.",
+  "trigger": { "type": "fileEdited", "patterns": ["app/ussd/engine.py"] },
+  "action": { "type": "runCommand", "command": "python -m pytest tests/test_engine.py tests/test_properties.py -q" }
+}
